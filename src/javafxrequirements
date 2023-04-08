@@ -1,0 +1,5 @@
+--module-path <javafx/lib>
+--add-modules=javafx.controls
+--add-modules=javafx.fxml
+
+Using javaFX <- As user library with correct indent

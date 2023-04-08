@@ -1,0 +1,121 @@
+﻿Logiciel
+
+
+Système: Logiciel
+Cas d’utilisation: Fournir des données au format CSV
+Acteur principal: Utilisateur
+Préconditions: 
+Garantie en cas de succès: Les données sont importées dans le Logiciel
+Garantie minimale: 
+
+
+Scénario nominal:
+    1 - L'utilisateur sélectionne la fonctionnalité "Importer des données"
+    2 - Le système demande l'emplacement du fichier CSV
+    3 - L'utilisateur fournit le chemin vers le fichier CSV et appuie sur le bouton valider
+    4 - Le système charge les données, construit le modèle et classifie les données.
+
+
+Scénario alternatif:
+A: Le fichier fourni est invalide
+Si le fichier fourni n'est pas au format CSV ou n'existe pas, alors:
+    4(A): Le système informe l'utilisateur d'une erreur
+    5(A): On retourne à l'étape 2 du scénario nominal
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Système: Logiciel
+Cas d’utilisation: Visualiser les données sous forme de nuage de points
+Acteur principal: Utilisateur
+Préconditions: 
+Garantie en cas de succès: Les données sont affichées sous forme de nuage de points
+Garantie minimale: 
+
+
+Scénario nominal:
+    1 - L'utilisateur sélectionne la fonctionnalité "Visualiser les données"
+    2 - Le système demande à l'utilisateur sur quels 2 attributs l'utilisateur souhaite projeter les points
+    3 - L'utilisateur sélectionne les 2 attributs demandés et valide
+    4 - Le système projette le nuage de points sur les 2 attributs choisis et affiche le résultat à l'utilisateur.
+
+
+Scénario alternatif:
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Système: Logiciel
+Cas d’utilisation: Accéder à la robustesse des données
+Acteur principal: Utilisateur
+Préconditions: L’utilisateur doit avoir fourni des données / Le système doit avoir classifié ces données 
+Garantie en cas de succès: Affichage des données sur la robustesse
+Garantie minimale: X
+
+
+Scénario nominal:
+1. L’utilisateur sélectionne la fonctionnalité  "Afficher les informations concernant la robustesse des données"
+2. Le système affiche un formulaire en demandant à l’utilisateur son choix pour la méthode d’évaluation si il y en a plusieurs
+3. L’utilisateur fait son choix et remplit le formulaire
+4. Le système récupère les informations sur la robustesse des données et fournit un affichage à l’utilisateur
+Scénario alternatif:
+* Le système n’a pas d’informations sur la robustesse utilisant cette méthode d’évaluation 
+   1. Le système calcule la robustesse avec cette méthode d’évaluation 
+   2. Retour à l’étape (4)
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Système: Logiciel
+Cas d’utilisation: Relancer la catégorisation
+Acteur principal: Utilisateur
+Préconditions: L’utilisateur doit avoir fourni des données
+Garantie en cas de succès: Les données sont classifiées 
+Garantie minimale: X
+
+
+Scénario nominal:
+1. L’utilisateur sélectionne l’option Relancer la catégorisation
+2. Le système recatégorise les données et envoi une confirmation à l’utilisateur 
+Scénario alternatif:
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Système: Logiciel
+Cas d’utilisation: Visualiser les données individualisées à un point
+Acteur principal: Utilisateur
+Préconditions: L’utilisateur doit avoir fourni des données / Le système doit avoir classifié ces données 
+Garantie en cas de succès: Les informations d’un point précis sont affichées 
+Garantie minimale: X
+
+
+Scénario nominal:
+1. L’utilisateur sélectionne un point lors de la visualisation du nuage de point
+2. Le système récupère les informations relatives au point sélectionné et les affiche
+Scénario alternatif:
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Système: Logiciel
+Cas d’utilisation: Entrer manuellement un point
+Acteur principal: Utilisateur
+Préconditions: L’utilisateur doit avoir fourni des données / Le système doit avoir classifié ces données 
+Garantie en cas de succès: Les informations d’un point précis sont affichées 
+Garantie minimale: X
+
+
+Scénario nominal:
+1. L’utilisateur choisit l’option Entrer manuellement un point
+2. Le système affiche un formulaire demandant à l’utilisateur d’entrer les informations du nouveau point à créer 
+3. L’utilisateur entre ces informations et valide
+4. Le système vérifie la cohérence de ces informations et les ajoute dans la classification
+Scénario alternatif:
+* Le système ne valide pas les données en étape (4)
+   1. Retour à l’étape (2)

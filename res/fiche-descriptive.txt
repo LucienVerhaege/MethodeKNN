@@ -1,0 +1,39 @@
+Logiciel
+
+Système: Logiciel
+Cas d’utilisation: Fournir des données au format CSV
+Acteur principal: Utilisateur
+Préconditions: 
+Garantie en cas de succès: Les données sont importées dans le Logiciel
+Garantie minimale: 
+
+Scénario nominal:
+    1 - L'utilisateur sélectionne la fonctionnalité "Importer des données"
+    2 - Le système demande l'emplacement du fichier CSV
+    3 - L'utilisateur fournit le chemin vers le fichier CSV et appuie sur le bouton valider
+    4 - Le système charge les données, construit le modèle et classifie les données.
+
+Scénario alternatif:
+A: Le fichier fourni est invalide
+Si le fichier fourni n'est pas au format CSV ou n'existe pas, alors:
+    4(A): Le système informe l'utilisateur d'une erreur
+    5(A): On retourne à l'étape 2 du scénario nominal
+
+----------------------------------------------------------------------------------------------------------------------
+
+Système: Logiciel
+Cas d’utilisation: Visualiser les données sous forme de nuage de points
+Acteur principal: Utilisateur
+Préconditions: 
+Garantie en cas de succès: Les données sont affichées sous forme de nuage de points
+Garantie minimale: 
+
+Scénario nominal:
+    1 - L'utilisateur sélectionne la fonctionnalité "Visualiser les données"
+    2 - Le système demande à l'utilisateur sur quels 2 attributs l'utilisateur souhaite projeter les points
+    3 - L'utilisateur sélectionne les 2 attributs demandés et valide
+    4 - Le système lol
+
+Scénario alternatif:
+
+    

@@ -1,0 +1,6 @@
+bin/
+data/
+src/personal/
+src/tppokemon/
+.metadata/
+.classpath
